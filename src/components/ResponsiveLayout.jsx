@@ -1,11 +1,16 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ResponsiveLayout = ({ img, span, position }) => {
+  AOS.init({ delay: 400, duration: 400 });
+
   return (
     <div
       className={`border-2 rounded-md border-[#D25143] md:col-span-2 row-span-3 ${
         !span ? "md:row-span-1" : `md:row-span-${span}`
       } relative group`}
+      data-aos="zoom-out"
     >
       <div
         className="absolute rounded-bl-md rounded-br-md bottom-0 h-[0vh] group-hover:h-[10vh] w-full bg-[#130014]
