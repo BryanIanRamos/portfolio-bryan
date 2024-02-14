@@ -22,6 +22,8 @@ import MyCourasel from "./components/MyCourasel";
 import { Icon } from "@iconify/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ResponsiveLayout from "./components/ResponsiveLayout";
+import sample from "./assets/reference.jpg";
 
 function App() {
   const [movingOffset, setMovingOffset] = useState(0);
@@ -85,7 +87,14 @@ function App() {
               src={Sun}
               alt="Stars"
               className="absolute block bottom-0 h-[63vh]"
-              style={movingOffset ? { bottom: `${-movingOffset}px` } : {}}
+              style={
+                movingOffset
+                  ? {
+                      bottom: `${-movingOffset}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             {/* Clouds */}
             <img
@@ -97,19 +106,36 @@ function App() {
               src={Cloud2}
               alt="Cloud"
               className="absolute block mr-[20%] right-0 top-[45%] w-[60vh]"
-              style={movingOffset ? { right: `${-movingOffset}px` } : {}}
+              style={
+                movingOffset
+                  ? {
+                      right: `${-movingOffset}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             <img
               src={Cloud3}
               alt="Cloud"
               className="absolute block right-[0px] top-[29%] w-[60vh]"
-              style={movingOffset ? { right: `${-movingOffset}px` } : {}}
+              style={
+                movingOffset
+                  ? {
+                      right: `${-movingOffset}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             <img
               src={Cloud4}
               alt="Cloud"
               className="absolute block left-[0px] top-[29%] w-[35vh]"
-              style={{ left: `${-movingOffset}px` }}
+              style={{
+                left: `${-movingOffset}px`,
+                transition: "bottom 0.1s ease-in-out",
+              }}
             />
             <img
               src={Cloud5}
@@ -132,13 +158,27 @@ function App() {
               src={Bird1}
               alt="Cloud"
               className="absolute block top-[28%] ml-[15%] left-0 w-[30vh] animate-slide-right"
-              style={movingOffset2 ? { left: `${-movingOffset2}px` } : {}}
+              style={
+                movingOffset2
+                  ? {
+                      left: `${-movingOffset2}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             <img
               src={Bird1}
               alt="Cloud"
               className="absolute block top-[28%] mr-[20%] right-0 transform scale-x-[-1] w-[17vh] animate-slide-left"
-              style={movingOffset2 ? { right: `${-movingOffset2}px` } : {}}
+              style={
+                movingOffset2
+                  ? {
+                      right: `${-movingOffset2}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
 
             {/* Bottom */}
@@ -152,13 +192,27 @@ function App() {
               src={BackMountains}
               alt="Mountains"
               className="absolute block w-full bottom-0 pb-5 animate-slide-up"
-              style={movingOffset ? { bottom: `${-movingOffset}px` } : {}}
+              style={
+                movingOffset
+                  ? {
+                      bottom: `${-movingOffset}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             <img
               src={Mountains}
               alt="Mountains"
               className="absolute block w-full bottom-0"
-              style={movingOffset2 ? { bottom: `${-movingOffset2}px` } : {}}
+              style={
+                movingOffset2
+                  ? {
+                      bottom: `${-movingOffset2}px`,
+                      transition: "bottom 0.1s ease-in-out",
+                    }
+                  : {}
+              }
             />
             {/* <img
               src={LeftTrees}
@@ -176,13 +230,19 @@ function App() {
               src={LeftTrees}
               alt="Trees"
               className="absolute block h-[30vh] bottom-0 left-0 animate-slide-right"
-              style={{ left: `${-movingOffset}px` }}
+              style={{
+                left: `${-movingOffset}px`,
+                transition: "bottom 0.1s ease-in-out",
+              }}
             />
             <img
               src={RightTrees}
               alt="Trees"
               className="absolute block h-[30vh] bottom-0 right-0 animate-slide-left"
-              style={{ right: `${-movingOffset}px` }}
+              style={{
+                right: `${-movingOffset}px`,
+                transition: "bottom 0.1s ease-in-out",
+              }}
             />
           </div>
         </div>
@@ -212,6 +272,32 @@ function App() {
             <Button text={" View Achievements"} />
           </div>
           <MyCourasel />
+        </div>
+      </section>
+      <section className="h-screen bg-[#130014] py-10 px-[130px] overflow-hidden">
+        <div className=" h-full w-full grid md:grid-cols-6  gap-5 p-5">
+          <div className=" md:col-span-2 row-span-3 md:row-span-1 flex flex-col justify-center items-center">
+            <div className="pl-3">
+              <span className="text-white text-[32px] font-['Poppins'] font-semibold leading-[1.5]">
+                MOST HIGHLIGTED PROJECT{" "}
+              </span>
+              <hr className="border-[3px] border-[#D25143] w-[70%]" />
+            </div>
+          </div>
+          <ResponsiveLayout img={"src/assets/reference.jpg"} />
+          <ResponsiveLayout img={sample} position={"left"} span={2} />
+          <ResponsiveLayout img={sample} />
+          <ResponsiveLayout img={sample} position={"left"} span={2} />
+          <div className="  md:col-span-2 row-span-3 md:row-span-1 flex flex-col justify-center items-center text-white">
+            <div className="px-3">
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur. Mi elit fusce vitae vel
+                pellentesque feugiat facilisis. Morbi tortor ut diam semper.
+              </p>
+              <button className="border-2 px-3 py-1 mt-4">View More</button>
+            </div>
+          </div>
+          <ResponsiveLayout img={sample} />
         </div>
       </section>
     </>
