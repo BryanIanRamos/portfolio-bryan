@@ -24,6 +24,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ResponsiveLayout from "./components/ResponsiveLayout";
 import sample from "./assets/reference.jpg";
+import BoarderImg from "./assets/pxfuel.png";
 
 function App() {
   const [movingOffset, setMovingOffset] = useState(0);
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <>
+      {/* Main Section  */}
       <section>
         <div className="relative h-screen overflow-hidden">
           <img
@@ -72,7 +74,10 @@ function App() {
                   <br />
                   animations, and Game Development.{" "}
                 </p>
-                <button className="border-[3px] w-fit py-2 px-10 mt-10">
+                <button
+                  className="border-[3px] w-fit py-2 px-10 mt-10
+                           hover:bg-gray-200 hover:text-[#130014] hover:font-semibold"
+                >
                   About Me
                 </button>
               </div>
@@ -252,6 +257,7 @@ function App() {
           className="relative inset-0 w-full h-full object-cover"
         /> */}
       </section>
+      {/* Carousel Section  */}
       <section className="h-screen bg-[#130014] py-10 px-[130px] overflow-hidden">
         <div className="w-full h-full  flex flex-1" data-aos="fade-up">
           <div className="w-1/3  px-10 py-[90px]">
@@ -274,6 +280,7 @@ function App() {
           <MyCourasel />
         </div>
       </section>
+      {/* Project Section  */}
       <section className="h-screen bg-[#130014] py-10 px-[130px] overflow-hidden">
         <div className=" h-full w-full grid md:grid-cols-6  gap-5 p-5">
           <div className=" md:col-span-2 row-span-3 md:row-span-1 flex flex-col justify-center items-center">
@@ -294,12 +301,167 @@ function App() {
                 Lorem ipsum dolor sit amet consectetur. Mi elit fusce vitae vel
                 pellentesque feugiat facilisis. Morbi tortor ut diam semper.
               </p>
-              <button className="border-2 px-3 py-1 mt-4">View More</button>
+              <button className="border-2 px-3 py-1 mt-4 hover:bg-gray-200 hover:text-[#130014] hover:font-semibold">
+                View More
+              </button>
             </div>
           </div>
           <ResponsiveLayout img={sample} />
         </div>
       </section>
+      {/* Know Me More Section  */}
+      <section className="h-fit bg-[#130014] py-10   overflow-hidden">
+        <div className="h-full w-full flex justify-center items-center mt-10">
+          <div className="h-[300px] w-full overflow-hidden relative">
+            <div className="h-full w-full absolute bg-[#130014] opacity-30 "></div>
+            <h3 className="absolute text-white text-[60px] font-bold w-full text-center top-[50px]">
+              KNOW ME MORE
+            </h3>
+            <div className="w-full h-fill flex justify-center">
+              <button
+                className="absolute h-[41px] w-[204px] border-[3px] text-white bottom-[90px]
+                         hover:bg-gray-200 hover:text-[#130014] hover:font-semibold"
+              >
+                View Profile
+              </button>
+            </div>
+            <img
+              src={BoarderImg}
+              alt=""
+              className="object-cover object-bottom h-full w-full"
+            />
+          </div>
+        </div>
+      </section>
+      {/* Contact Section  */}
+      {/* To be finished  */}
+      <section
+        className="h-screen bg-[#130014] py-10 px-[130px] overflow-hidden 
+                  flex flex-col justify-center items-center gap-5"
+      >
+        <div className="w-fit h-fit border">
+          <h3 className="text-white text-[55px] font-bold font-['Poppins]">
+            Keep in Touch
+          </h3>
+          <div className=" border-2 px-20"></div>
+        </div>
+        <div className="w-full border grid grid-cols-2 text-white">
+          <div className="col-1 border p-[60px]">
+            <h3 className="text-[35px] font-semibold font-['Poppins']">
+              Send me an Email
+            </h3>
+            <p className="text-[15px] font-['Poppins']">
+              Lorem ipsum dolor sit amet consectetur. Mi elit fusce vitae vel
+              pellentesque feugiat facilisis. Morbi tortor ut diam semper.
+            </p>
+          </div>
+          <div className="col-span-1 border ">
+            <div className="h-[505px] w-[555px] border relative">
+              <div
+                className="absolute h-[275px] w-[452px] border-[2px] border-black right-0 top-[55px] 
+              bg-gray-200 z-20 rounded-[4px]"
+              ></div>
+              <div
+                className="absolute h-[275px] w-[452px] border-[3px] border-[#A72F3B] bg-[#A72F3B] 
+              right-[15px] top-[75px] z-10 rounded-[4px]"
+              ></div>
+              <div
+                className="absolute h-[275px] w-[452px] border-[3px] border-[#A72F3B] right-[30px] 
+              top-[95px] z-0 rounded-[4px]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="h-[283px] w-full bg-[#2B002B]">
+        <div className="w-full h-full grid grid-cols-3 text-white pt-10">
+          {/* Links  */}
+          <div className="col-1 flex justify-end">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-['Poppins'] text-[29px] font-bold">Links</h3>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="maki:arrow"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">Home</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="maki:arrow"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">Profile</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="maki:arrow"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">Projects</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="maki:arrow"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">Achievements</p>
+              </div>
+            </div>
+          </div>
+          {/* Socials  */}
+          <div className="col-1 flex justify-center cursor-pointer">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-['Poppins'] text-[29px] font-bold">
+                Socials
+              </h3>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="ic:baseline-facebook"
+                  className="text-white h-[24px] w-[24px]"
+                />
+                <p className="20px">Facebook</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="ri:instagram-fill"
+                  className="text-white h-[24px] w-[24px]"
+                />
+                <p className="20px">Instagram</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="mdi:github"
+                  className="text-white h-[24px] w-[24px]"
+                />
+                <p className="20px">Github</p>
+              </div>
+            </div>
+          </div>
+          {/* Contacts  */}
+          <div className="col-1 flex justify-start">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-['Poppins'] text-[29px] font-bold">
+                Contacts
+              </h3>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="bi:phone-fill"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">+63987654321</p>
+              </div>
+              <div className="flex gap-2 items-center cursor-pointer">
+                <Icon
+                  icon="dashicons:email"
+                  className="text-white h-[20px] w-[20px]"
+                />
+                <p className="20px">Sample@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
