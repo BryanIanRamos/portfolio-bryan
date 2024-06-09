@@ -1,0 +1,42 @@
+
+      {/* Contact Section  */}
+      {/* To be finished  */}
+      <section
+        className="h-screen bg-[#130014] py-10 px-[130px] overflow-hidden 
+                  flex flex-col justify-center items-center gap-5"
+      >
+        <div className="w-fit h-fit border">
+          <h3 className="text-white text-[55px] font-bold font-['Poppins]">
+            Keep in Touch
+          </h3>
+          <div className=" border-2 px-20"></div>
+        </div>
+        <div className="w-full border grid grid-cols-2 text-white">
+          <div className="col-1 border p-[60px]">
+            <h3 className="text-[35px] font-semibold font-['Poppins']">
+              Send me an Email
+            </h3>
+            <p className="text-[15px] font-['Poppins']">
+              Lorem ipsum dolor sit amet consectetur. Mi elit fusce vitae vel
+              pellentesque feugiat facilisis. Morbi tortor ut diam semper.
+            </p>
+          </div>
+          <div className="col-span-1 border ">
+            <div className="h-[505px] w-[555px] border relative">
+              <div
+                className="absolute h-[275px] w-[452px] border-[2px] border-black right-0 top-[55px] 
+              bg-gray-200 z-20 rounded-[4px]"
+              ></div>
+              <div
+                className="absolute h-[275px] w-[452px] border-[3px] border-[#A72F3B] bg-[#A72F3B] 
+              right-[15px] top-[75px] z-10 rounded-[4px]"
+              ></div>
+              <div
+                className="absolute h-[275px] w-[452px] border-[3px] border-[#A72F3B] right-[30px] 
+              top-[95px] z-0 rounded-[4px]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
